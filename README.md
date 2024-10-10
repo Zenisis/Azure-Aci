@@ -1,8 +1,23 @@
-The terrform code launch Redmine application by Azure container instance
-steps to launch this
-step 1 - clone the repo 
-step 2 - run terraform config for folder Azure-ACR  first to create container registory 
-step 3 - add the docker image to that registory (as of in this code  the registory having redmine image )
-step 4  run terrform code for folder Azure-ACI  it will create container for redmine
-step 5 run terrform code for folder Nginx-Vm it will create vm for nginx 
-step 6 ssh to vm and add give config file in the folder edit the config file with desired changes in place of server add your server name and in place of proxy pass add ip address of ACI public ip 
+Launching the Redmine Application using Azure Container Instance
+Steps to Launch:
+Clone the Repository
+Clone the repository containing the Terraform code.
+
+Run Terraform Configuration for Azure-ACR
+Navigate to the Azure-ACR folder and run the Terraform configuration to create the Azure Container Registry.
+
+Add the Docker Image to the Registry
+Ensure that the Docker image (in this case, the Redmine image) is added to the Azure Container Registry.
+
+Run Terraform Code for Azure-ACI
+Navigate to the Azure-ACI folder and run the Terraform code. This will create the container for Redmine.
+
+Run Terraform Code for Nginx-VM
+Navigate to the Nginx-VM folder and run the Terraform code to create a Virtual Machine for Nginx.
+
+SSH to the VM
+SSH into the newly created VM and add your Nginx configuration file to the appropriate folder.
+
+Edit the configuration file:
+Replace server_name with your desired server name.
+Replace proxy_pass with the public IP address of the Azure Container Instance (ACI).
