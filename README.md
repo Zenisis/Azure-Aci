@@ -21,3 +21,7 @@ SSH into the newly created VM and add your Nginx configuration file to the appro
 Edit the configuration file:
 Replace server_name with your desired server name.
 Replace proxy_pass with the public IP address of the Azure Container Instance (ACI).
+
+
+Configure the Domain Name in AWS
+The domain name is configured in AWS. Go to Route 53, select the required hosted zone, then select the desired record. Edit the record to add the IP address of the Nginx VM.
